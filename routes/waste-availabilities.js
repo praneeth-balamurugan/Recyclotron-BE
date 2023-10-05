@@ -151,14 +151,14 @@ router.delete("/:id", (req, res) => {
         return res
           .json({
             waste: waste,
-            message: "Scrap Delete Successfully",
+            message: "Scrap  Delete Successfully",
           })
           .status(200);
       }
       return res
         .json({
           waste: null,
-          message: "Scrap Deleting Failed",
+          message: "Scraps Deleting Failed",
         })
         .status(404);
     })
