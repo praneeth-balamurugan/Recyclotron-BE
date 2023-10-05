@@ -57,11 +57,11 @@ router.post("/", (req, res) => {
     packaging: req.body.packaging,
     packagingDegradability: req.body.packagingDegradability,
     detail: req.body.detail,
-    // image: req.body.image,
+    image: req.body.image,
     scrapId: req.body.scrapId,
     creatorId: req.body.creatorId,
     createdAt: req.body.createdAt,
-    industryName: req.body.industryName.toLowerCase(),
+   // industryName: req.body.industryName.toLowerCase(),
     scrapLocation: req.body.scrapLocation,
   });
 
@@ -145,8 +145,7 @@ router.post("/non-tech", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   const id = req.params.id;
-  wasteAvailability
-    .findByIdAndDelete(id, { password: 0 })
+  WasteAvailability.findByIdAndDelete(id, { password: 0 })
     .then((waste) => {
       if (waste._id) {
         return res

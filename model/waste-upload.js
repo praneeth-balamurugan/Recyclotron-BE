@@ -4,48 +4,48 @@ const mongoose = require("mongoose");
 const wasteUploadSchema = new mongoose.Schema({
   product: {
     type: String,
-    required: true,
+   // required: true,
   },
   quantity: {
     type: String,
-    required: true,
+    //required: true,
   },
   location: {
     type: String,
-    required: true,
+    //required: true,
   },
   wasteProcessingDescription: {
     type: String,
-    required: true,
+    //required: true,
   },
   wasteProducedTime: {
     type: String,
-    required: true,
+    //required: true,
   },
   utilizableTime: {
     type: String,
-    required: true,
+    //required: true,
   },
   transportationAvailable: {
     type: String,
-    required: true,
+    //required: true,
   },
-  // image: {
-  //   type: String,
+   image: {
+    type: String,
   //   required: true,
-  // },
+   },
   creator: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    required: true,
+  //  required: true,
   },
   createdAt: {
     type: String,
-    required: true,
+   // required: true,
   },
   isLocked: {
     type: String,
-    required: true,
+   // required: true,
   }
 });
 

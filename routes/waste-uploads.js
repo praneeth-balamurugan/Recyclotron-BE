@@ -44,7 +44,7 @@ router.get("/:id", (req, res) => {
     .then((waste) => {
       if (waste) {
         return res
-          .json({ scrap: waste[0], message: "Waste fetched successfully!" })
+          .json({ scrap: waste, message: "Wastes fetched successfully!" })
           .status(200);
       }
       return res
@@ -87,7 +87,7 @@ router.post("/add", (req, res) => {
   const url = "http://" + req.get("host");
 
   const wasteUpload = new WasteUpload({
-    product: req.body.productName,
+    product: req.body.product,
     quantity: req.body.quantity,
     wasteProcessingDescription: req.body.wasteProcessingDescription,
     wasteProducedTime: req.body.scrapTime,
@@ -95,7 +95,7 @@ router.post("/add", (req, res) => {
     location: req.body.location,
     createdAt: req.body.createdAt,
     transportationAvailable: req.body.transportationOptions,
-    // image: url + "/images/" + req.file.filename,
+    image: req.body.image,
     creator: req.body.creator,
     isLocked: false,
   });
