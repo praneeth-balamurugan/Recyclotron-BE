@@ -19,6 +19,7 @@ jobs:
       - name: Push docker image
         run: docker push bpraneeth/recyclotron-be:latest
 
+
   deploy:
     needs: build
     runs-on: self-hosted
