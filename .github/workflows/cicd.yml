@@ -20,14 +20,14 @@ jobs:
         run: docker push bpraneeth/recyclotron-be:latest
 
 
-  deploy:
-    needs: build
-    runs-on: self-hosted
-    steps:
-      - name: Pull image form dockerhub
-        run: docker pull bpraneeth/recyclotron-be:latest
-      - name: delete old container
-        run: docker container rm -f nodejs-app-container
-      - name: Run the container
-        run: docker run -d -p 4000:3000 --name nodejs-app-container bpraneeth/recyclotron-be
+  # deploy:
+  #   needs: build
+  #   runs-on: self-hosted
+  #   steps:
+  #     - name: Pull image form dockerhub
+  #       run: docker pull bpraneeth/recyclotron-be:latest
+  #     - name: delete old container
+  #       run: docker container rm -f nodejs-app-container
+  #     - name: Run the container
+  #       run: docker run -d -p 4000:3000 --name nodejs-app-container bpraneeth/recyclotron-be
       
