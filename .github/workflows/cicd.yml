@@ -28,5 +28,5 @@ jobs:
       - name: delete old container
         run: docker container rm -f nodejs-app-container
       - name: Run the container
-        run: docker run -d -p 4000:4000 --name nodejs-app-container bpraneeth/recyclotron-be
+        run: docker run -d -p 4000:3000 --name nodejs-app-container bpraneeth/recyclotron-be
       
